@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wave-generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      :root{
+        --hover:red;
+        --text-color:white;
+        --black:black;
+      }
+      .main{
+        height: auto;
+        width: 100%;
+      }
+      .main .bg-img {
+        width: 100%;
+        height: 100vh;
+        
+        background-size: 100% 100%;
+        position: relative;
+      }
+      .bg-img::after {
+        content: "";
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+      }
+ 
+      svg {
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 10;
+      }
+      .pattern {
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        align-items: center;
+      }
+      .pattern hr {
+        width: 50px;
+        height: 1px;
+        background-color: black;
+        color: black;
+        box-shadow: none;
+      }
+      .pattern i {
+        font-size: 8px;
+        color: var(--hover);
+      }
+      .content{
+        text-transform: uppercase;
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 20;
+        row-gap: 20px;
+        padding-top: 150px;
+      }
+      .main .profile img{
+        height: 70px;
+        width: 70px;
+        border: 2px solid var(--hover);
+        border-radius: 50%;
+      }
+      .profile{
+        display: flex;
+        justify-content: space-between;
+      } 
+      .img1{
+        position: absolute;
+        left: 200px;
+        bottom: 150px;
+        z-index: 30;
+      }
+      .img2{
+        position: absolute;
+        left: 550px;
+        bottom: 270px;
+        z-index: 30;
+      }
+      .img3{
+        position: absolute;
+        right: 550px;
+        bottom: 200px;
+        z-index: 30;
+      }
+      .img4{
+        position: absolute;
+        right: 200px;
+        bottom: 90px;
+        z-index: 30;
+      }
+      .text{
+        color: var(--hover);
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        visibility: hidden;
+        transition: all 0.3s;
+      }
+      .text h2{
+        text-transform: uppercase;
+        font-size: 25px;
+      }
+      .text1{
+        position: absolute;
+        left: 150px;
+        bottom: 40px;
+
+      }
+      .text2{
+        position: absolute;
+        left: 490px;
+        bottom: 150px;
+
+      }
+      .text3{
+        position: absolute;
+        right: 470px;
+        bottom: 90px;
+      }
+      .text4{
+        position: absolute;
+        right: 140px;
+        bottom: 10px;
+      }
+      .block1 img:hover + .text1{
+       visibility: visible;
+       left: 150px;
+       bottom: 70px;
+      }
+      .block2 img:hover + .text2{
+       visibility: visible;
+       left: 490px;
+      bottom: 180px;
+      }
+      .block3 img:hover + .text3{
+       visibility: visible;
+       right: 470px;
+       bottom: 110px;
+       
+      }
+      .block4 img:hover + .text4{
+       visibility: visible;
+       right: 140px;
+       bottom: 30px;
+      }
+      .block1 img:hover , .block2 img:hover , .block3 img:hover , .block4 img:hover{
+        border: none;
+    
+
+      }
+      @media (max-width:500) and (max-width:1100)
+      {
+        .main{
+          width: 100%;
+
+        }
+        .contain{
+          position: relative;
+          margin: 0;
+        }
+        p{
+          font-size: 5px;
+        }
+      }
+
+
+
+
+  
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="bg-img">
+        <img src="../CSS MODULE Submited/image 2/background.jpg" alt="" srcset="">
+        <div class="content">
+            <h1>our team</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, enim.</p>
+            <div class="pattern">
+                <hr />
+                <i class="fa-solid fa-circle"></i>
+                <hr />
+            </div>
+          </div>
+        <div class="wave-path">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#e74c3c"
+              style="stroke: red"
+              fill-opacity="0.5"
+              d="M0,288L48,256C96,224,192,160,288,112C384,64,480,32,576,26.7C672,21,768,43,864,85.3C960,128,1056,192,1152,197.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="block1">
+          <img src="../CSS MODULE Submited/image 2/360_F_242522709_ZhoDmO1L1PHkL6yvVVNutSBGsk1Ob7m0.jpg" alt="" class="img1">
+          <div class="text1 text">
+            <h2>web designer</h2>
+            <p>ui/ux design</p>
+        </div>
+        </div>
+        <div class="block2">
+          <img src="../CSS MODULE Submited/image 2/360_F_678097876_9kJnFlRYGAeibsVxspqtCL9UR8giLAvF.jpg" alt="" class="img2">
+          <div class="text2 text">
+            <h2>web designer</h2>
+            <p>ui/ux design</p>
+        </div>
+        </div>
+        <div class="block3">
+          <img src="../CSS MODULE Submited/image 2/photo-1499996860823-5214fcc65f8f.avif" alt="" class="img3">
+          <div class="text3 text">
+            <h2>web designer</h2>
+            <p>ui/ux design</p>
+        </div>
+        </div>
+        <div class="block4">        
+          <img src="../CSS MODULE Submited/image 2/photo-1500648767791-00dcc994a43e.avif" alt="" class="img4">
+          <div class="text4 text">
+            <h2>web designer</h2>
+            <p>ui/ux design</p>
+        </div>
+        </div>
+      
+      </div>
+    </div>
+  </body>
+</html>

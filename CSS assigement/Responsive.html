@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>figma template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --text-color: #794cff;
+      --border: #e1e5ea;
+      --black: #35414b;
+      --purple: #F6F3FC;
+    }
+   
+     .Heading{
+      margin-top: 20px;
+      position: absolute;
+      left: 50px;
+     }
+
+
+    nav {
+
+      background-color: white;
+      height: 80px;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      display: inline-block;
+
+  }
+
+  nav ul {
+      float: right;
+      margin-right: 20px;
+
+
+  }
+
+  nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+
+  }
+
+  nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 17px;
+      text-transform: uppercase;
+      padding: 7px 13px;
+      border-radius: 4px;
+
+
+  }
+
+  a.active,
+  a:hover {
+      background: #1b9bff;
+      transition: .5s;
+
+  }
+
+  .checkbtn {
+      font-size: 30px;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+
+  }
+
+  #check {
+      display: none;
+
+  }
+    .login-info {
+      list-style: none;
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+    }
+
+
+    .click {
+      height: 48px;
+      width: 169px;
+      border-radius: 3px;
+      background-color: #ece5ff;
+      border: none;
+      color: var(--text-color);
+      text-transform: capitalize;
+      font-size: 17px;
+      padding: 5px;
+      font-family: 800;
+    }
+
+    .search-bar {
+      width: 483px;
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #e1e5ea;
+      background-color: var(--text-color);
+      border: none;
+      border-radius: 3px;
+    }
+
+    .search-bar input {
+      height: 52px;
+      width: 319px;
+      border: none;
+      padding: 15px;
+      border: 2px solid var(--border);
+    }
+
+    ::placeholder {
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    .search-bar span {
+      font-size: 18px;
+      color: white;
+      background-color: var(--text-color);
+      border: none;
+    }
+
+    .content {
+      width: 55%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 100px;
+      row-gap: 20px;
+    }
+
+    .content .head-line {
+      padding: 5px;
+      height: 32px;
+      font-size: 15px;
+      background-color: #f2f9eb;
+      border-radius: 100px;
+    }
+
+    .content p span {
+      background-color: #81c43b;
+      border-radius: 100px;
+    }
+
+    .content h2 {
+      font-size: 64px;
+      text-transform: capitalize;
+      text-align: center;
+      color: var(--black);
+      font-weight: 600;
+      line-height: 72px;
+      text-align: center;
+    }
+
+    .content p {
+      text-align: center;
+      font-size: 20px;
+      font-family: 400;
+    }
+
+    .graph {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo p {
+      text-transform: uppercase;
+      font-size: 20px;
+      color: var(--black);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+
+    .box {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .ellipse img {
+      height: 900px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      margin: auto;
+      z-index: -1;
+    }
+
+    .stack {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 100px;
+      background-color: var(--border);
+    }
+
+    .stack1,
+    .stack2 {
+      height: 700px;
+      width: 50%;
+    }
+
+    .stack1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stack2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 10px;
+
+    }
+
+    .grid {
+      height: 120px;
+      width: 500px;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .grid h3 {
+      text-transform: capitalize;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .grid:hover {
+      border-left: 10px solid var(--text-color);
+      background-color: var(--purple);
+      border-bottom: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .layout h1 {
+      text-transform: capitalize;
+      color: var(--black);
+      font-size: 50px;
+      padding-bottom: 50px;
+    }
+
+    .card {
+      height: 250px;
+      width: 400px;
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-layout {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 20px;
+      column-gap: 30px;
+    }
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      row-gap: 5px;
+      color: var(--black);
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    .card h3 {
+      text-transform: capitalize;
+      font-family: 400;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+
+    }
+
+    .stack3 {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row-reverse;
+      margin-top: 100px;
+      background-color: var(--purple);
+    }
+
+    .grid-text {
+      width: 60%;
+      display: flex;
+      row-gap: 25px;
+      flex-direction: column;
+    }
+
+    .grid-text h3 {
+      text-transform: capitalize;
+      font-size: 30px;
+      color: var(--black);
+    }
+
+    .designer {
+      height: 90px;
+      width: 300px;
+      border: 2px solid;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 10px;
+      text-transform: capitalize;
+      border: none;
+    }
+
+    .designer h3 {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .page3 {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px;
+      width: 40%;
+      text-align: center;
+      color: var(--black);
+    }
+
+    .page3 h3 {
+      text-transform: capitalize;
+      color: var(--black);
+      font-size: 40px;
+      font-family: 600;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      margin-top: 30px;
+    }
+
+    .designer:hover {
+      box-shadow: 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-top: 5px solid var(--black);
+    }
+
+    .ad {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+      width: 50%;
+    }
+
+    .ad img {
+      height: 60px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .ads {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      border-radius: 16px;
+      height: 150px;
+      align-items: center;
+      background-color: var(--text-color);
+      text-transform: capitalize;
+      font-size: 25px;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      flex-direction: row;
+    }
+
+    .contact-info {
+      height: 270px;
+      width: 300px;
+      /* border: 2px solid; */
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      background-color: #1D2830;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      color: white;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      text-align: start;
+
+    }
+
+    .contact-info li {
+      text-transform: capitalize;
+      padding: 7px;
+      font-family: 300;
+      font-size: 16px;
+    }
+
+    .div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      border-top: 2px solid var(--border);
+      margin-top: 10px;
+    }
+
+    .watermark {
+      padding: 12px;
+      color: white;
+    }
+
+    .div .icons {
+      width: 20%;
+      margin-top: 5px;
+    }
+
+    .icons img {
+      padding: 10px;
+    }
+
+    .device {
+      /* display: none; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 2px;
+
+    }
+
+    .label {
+      display: none;
+    }
+
+    .device-button {
+      display: none;
+      height: 52px;
+      width: 318px;
+      background-color: #794cff;
+      border-radius: 4px;
+      border: none;
+
+    }
+
+    .device-button input {
+      height: 52px;
+      width: 318px;
+      text-align: center;
+    }
+
+    .device-button p {
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    
+  @media (max-width:952px) {
+    nav ul li a {
+        font-size: 16px;
+
+    }
+
+}
+
+@media (max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+
+   nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+
+    nav ul li a {
+        font-size: 20px;
+
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+}
+
+
+
+    @media (min-width:1200px) and (max-width:1350px) {
+
+      .card {
+        height: 200px;
+        width: 320px;
+        row-gap: 15px;
+      }
+
+      .content h2 {
+        font-size: 50px;
+      }
+
+      .card h3 {
+        text-transform: capitalize;
+        font-family: 400;
+      }
+    }
+
+    @media (min-width:1000px) and (max-width:1200px) {
+      
+
+
+      .layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-layout {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+
+      }
+
+      .card {
+        height: 200px;
+        width: 250px;
+      }
+
+      .content {
+        width: 70%;
+      }
+
+      .content h2 {
+        font-size: 35px;
+        line-height: 40px;
+      }
+
+      .ad img {
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .stack3 .stack1 {
+        width: 55%;
+      }
+
+      .stachk3 .stack2 {
+        width: 45%;
+      }
+
+      .stack3 .stack1 img {
+        height: 350px;
+        width: 450px;
+      }
+
+      .grid-text h3 {
+        text-transform: capitalize;
+        font-size: 20px;
+        color: var(--black);
+      }
+
+      .page3 {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        width: 70%;
+        text-align: center;
+        color: var(--black);
+      }
+
+      .watermark {
+        padding: 15px;
+      }
+
+      .div .icons {
+        width: 28%;
+        margin-top: 5px;
+      }
+
+      .graph {
+        height: 550px;
+      }
+
+      .stack .stack1 img {
+        width: 450px;
+      }
+
+      .stack .stack2 .grid {
+        width: 400px;
+      }
+
+
+    }
+
+    @media (min-width:500px)and (max-width:1000px) {
+
+      .login-info,
+      #search-bar {
+        display: none;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+        margin-top: 60px;
+      }
+
+
+      .layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-layout {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        margin: auto;
+        gap: 20px;
+      }
+
+      .card {
+        height: 200px;
+        width: 250px;
+        row-gap: 10px;
+
+
+      }
+
+      .content {
+        margin-top: 20px;
+        width: 70%;
+      }
+
+      .content h2 {
+        font-size: 35px;
+        line-height: 40px;
+      }
+
+      .layout p {
+        font-size: 20px;
+      }
+
+      .ad img {
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .stack3 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stack1,
+      .stack2 {
+        height: 500px;
+      }
+
+      .stack3 .stack2 {
+        width: 100%;
+
+      }
+
+      .grid-text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+      }
+
+      .stack3 .stack1 {
+        height: 40%;
+        margin-top: 40px;
+      }
+
+      .stack3 .stack1 img {
+        height: 300px;
+        width: 400px;
+      }
+
+      .grid-text h3 {
+        text-transform: capitalize;
+        font-size: 35px;
+        color: var(--black);
+      }
+
+      .page3 {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        width: 70%;
+        text-align: center;
+        color: var(--black);
+      }
+
+      .watermark {
+        padding: 15px;
+      }
+
+      .div .icons {
+        width: 28%;
+        margin-top: 5px;
+      }
+
+      .graph {
+        height: 400px;
+      }
+
+      .stack {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      .stack .stack1 img {
+        margin-top: 40px;
+        width: 400px;
+      }
+
+      .stack .stack1 {
+        height: 60%;
+      }
+
+      .stack .stack2 {
+        margin-top: 35px;
+        row-gap: 30px;
+      }
+
+      .stack .stack2 .grid {
+        width: 500px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+      }
+
+      .layout h1 {
+        font-size: 40px;
+      }
+
+      .page3 h3 {
+        font-size: 30px;
+      }
+
+      .profile {
+        flex-direction: column;
+      }
+
+      .card p,
+      .card h3 {
+        font-size: 15px;
+      }
+
+      .card img {
+        height: 45px;
+      }
+
+
+    }
+
+    @media (max-width:500px) {
+
+      .login-info,
+      #search-bar {
+        display: none;
+      }
+
+      .icons {
+        display: none;
+      }
+
+      .ellipse {
+        width: 100%;
+      }
+
+      .layout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-layout {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, auto);
+        gap: 20px;
+        margin: auto;
+      }
+
+      .card {
+        height: 200px;
+        width: 250px;
+        row-gap: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        margin-left: 0;
+
+      }
+
+      .content {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .content h2 {
+        font-size: 25px;
+        line-height: 40px;
+      }
+
+      .content p {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      .layout h1 {
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        margin-left: 80px;
+      }
+
+      .ads {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+      }
+
+      .ad p {
+        width: 1000%;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 10px;
+
+      }
+
+      .ad1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+      }
+
+      .ad img {
+        height: 35px;
+        width: 150px;
+        border: none;
+        border-radius: 0;
+
+      }
+
+      .stack3 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stack1,
+      .stack2 {
+        height: 500px;
+      }
+
+      .stack3 .stack2 {
+        width: 100%;
+        font-size: 10px;
+
+      }
+
+      .grid-text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+      }
+
+      .stack3 .stack1 {
+        height: 40%;
+        margin-top: 40px;
+
+      }
+
+      .stack3 .stack1 img {
+        height: 300px;
+        width: 350px;
+      }
+
+      .grid-text h3 {
+        text-transform: capitalize;
+        font-size: 18px;
+        color: var(--black);
+      }
+
+      .page3 {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        width: 70%;
+        text-align: center;
+        color: var(--black);
+      }
+
+      .watermark {
+        padding: 15px;
+      }
+
+      .div .icons {
+        width: 28%;
+        margin-top: 5px;
+      }
+
+      .graph {
+        height: 300px;
+      }
+
+      .stack {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      .stack .stack1 img {
+        margin-top: 40px;
+        width: 350px;
+      }
+
+      .stack .stack1 {
+        height: 60%;
+      }
+
+      .stack .stack2 {
+        margin-top: 35px;
+        row-gap: 30px;
+      }
+
+      .stack .stack2 .grid {
+        width: 400px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      
+      }
+
+      .page3 h3 {
+        font-size: 30px;
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 60px;
+      }
+
+      .card p,
+      .card h3 {
+        font-size: 15px;
+      }
+
+      .card img {
+        height: 45px;
+      }
+
+      .search-bar {
+        display: none;
+      }
+
+      .logo p {
+        font-size: 15px;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 35px;
+      }
+
+      .box {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-info {
+        height: 40px;
+        overflow: hidden;
+        transition: all 0.9s linear;
+      }
+
+      .contact-info:hover {
+        height: 250px;
+
+
+      }
+
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+
+  <nav>
+ 
+
+<ul class="login-info">
+  <li>Log in</li>
+  <li><button class="click">get started free</button></li>
+</ul>
+
+
+    <input type="checkbox" name="" id="check">
+    <label for="check" class="checkbtn">
+
+        <i class="fa-solid fa-bars"></i>
+
+        
+    </label>
+
+    <ul>
+        <li><a href="" > how it works </a></li>
+        <li><a href=""> product </a></li>
+        <li><a href=""> pricing </a></li>
+        <li><a href=""> resources </a></li>
+       
+    </ul>
+    <h2 class="Heading"> team.flow </h2>
+
+    
+</nav>
+
+
+
+
+
+
+ 
+  <div class="main">
+    <div class="content">
+      <p class="head-line"><span>save 90%</span> Get account of $59></p>
+      <h2>manage the team everyone wants to be on</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+        porro similique doloribus officia odio
+      </p>
+      <button class="search-bar">
+        <input type="text" name="" id="" placeholder="name@yourcompany.com" />
+        <span style="width: 164px">Try it free</span>
+      </button>
+      <button class="device">
+        <button class="device-button">
+          <input type="email" placeholder="name@yourcompany.com">
+        </button>
+        <button class="device-button">
+          <p>try it free</p>
+        </button>
+      </button>
+    </div>
+    <br> <br>
+    <div class="graph">
+      <img src="./image/Graph 2 1.png" alt="">
+    </div>
+    <br> <br>
+    <div class="logo">
+      <p class="logo-p">trusted by over 10.000+ worlds best teams</p>
+      <div class="box">
+        <img src="../CSS MODULE Submited/image 2/google-2 - Copy.png" alt="">
+        <img src="../CSS MODULE Submited/image 2/hubspot 1.png" alt="">
+        <img src="../CSS MODULE Submited/image 2/facebok - Copy.png" alt="">
+        <img src="../CSS MODULE Submited/image/airbnb 1.png" alt="">
+        <img src="../CSS MODULE Submited/image 2/slack-2 1.png" alt="">
+      </div>
+    </div>
+    <div class="stack">
+      <div class="stack1 stacks">
+        <img src="../CSS MODULE Submited/image 2/Group 25 - Copy.png" alt="">
+      </div>
+      <div class="stack2 stacks">
+        <div class="grid">
+          <h3>survey your team</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, at.</p>
+
+        </div>
+        <div class="grid">
+          <h3>resolve issues quickly</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quia!</p>
+        </div>
+        <div class="grid">
+          <h3>plan your 1-on-1s</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, sed.</p>
+        </div>
+        <div class="grid">
+          <h3>track your progress</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga.</p>
+        </div>
+      </div>
+    </div>
+    <br> <br>
+    <div class="layout">
+      <h1>make your work easier</h1>
+      <div class="card-layout-main">
+
+        <div class="card-layout">
+          <div class="card">
+            <img src="../CSS MODULE Submited/image 2/logo1 - Copy.png" alt="">
+            <h3>team surveys & reports</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, sapiente!</p>
+          </div>
+          <div class="card">
+            <img src="../CSS MODULE Submited/image 2/logo2 - Copy.png" alt="">
+            <h3>collaborative 1:1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, delectus?</p>
+          </div>
+          <div class="card">
+            <img src="../CSS MODULE Submited/image 2/logo3.png" alt="">
+            <h3>learning center</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel.</p>
+          </div>
+          <div class="card">
+            <img src="../CSS MODULE Submited/image 2/logo4.png" alt="">
+            <h3>anonymous messaging</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel.</p>
+
+          </div>
+          <div class="card">
+            <img src="../CSS MODULE Submited/image 2/logo5.png" alt="">
+            <h3>conversation engine</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel.</p>
+
+          </div>
+          <div class="card">
+            <img src="../CSS MODULE Submited/image 2/logo6.png" alt="">
+            <h3>exclusives manager</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stack3">
+        <div class="stack1">
+          <img src="../CSS MODULE Submited/image 2/graph 3 - Copy.png" alt="">
+        </div>
+        <div class="stack2">
+          <div class="grid-text">
+            <h3>we work how you work everyoneday</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, at. Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Accusamus, deserunt?</p>
+            <button class="click" style="color: white; background-color: #794cff;">get started free</button>
+          </div>
+
+        </div>
+      </div>
+      <br> <br>
+      <div class="page3">
+        <h3>why customers love working with us</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sit dolores labore incidunt quod suscipit
+          consequatur quaerat nesciunt facilis cumque! Lorem ipsum dolor sit amet.</p>
+
+      </div>
+      <div class="profile">
+        <div class="designer">
+          <img src="../CSS MODULE Submited/image 2/photo-1.png" alt="">
+          <div class="details">
+            <h3>jorge robertson</h3>
+            <p>cs at google</p>
+          </div>
+        </div>
+        <div class="designer">
+          <img src="../CSS MODULE Submited/image 2/photo-2.png" alt="">
+          <div class="details">
+            <h3>francisco bell</h3>
+            <p>designer at microsoft </p>
+          </div>
+        </div>
+        <div class="designer">
+          <img src="../CSS MODULE Submited/image 2/photo-3.png" alt="">
+          <div class="details">
+            <h3>beth fox</h3>
+            <p>developer at airbnb</p>
+          </div>
+        </div>
+      </div>
+      <br> <br>
+      <div class="ads">
+        <div class="ad">
+          <p>84% of employees who use trust their direct manager</p>
+
+        </div>
+        <div class="ad ad1">
+          <img src="../CSS MODULE Submited/image 2/google-play-badge 1 - Copy.png" alt="">
+          <img src="../CSS MODULE Submited/image 2/app.png" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br><br>
+  <footer>
+    <div class="footer">
+      <div class="contact-info">
+        <ul>
+          <li>
+            <h3>company</h3>
+          </li>
+          <li>about us</li>
+          <li>blog</li>
+          <li>careers</li>
+          <li>contact us</li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <ul>
+          <li>
+            <h3>support</h3>
+          </li>
+          <li>help center</li>
+          <li>safety center</li>
+          <li>community</li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <ul>
+          <li>
+            <h3>legal</h3>
+          </li>
+          <li>cookie policy</li>
+          <li>privacy policy</li>
+          <li>terms of service</li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        <ul>
+          <li>
+            <h3>install App</h3>
+          </li>
+          <li>
+            <img src="../CSS MODULE Submited/image 2/google-2 - Copy.png" alt="">
+          </li>
+          <li>
+            <img src="../CSS MODULE Submited/image 2/apple.png" alt="">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="div">
+      <div class="watermark">
+        <p>© 2020 - All rights reserved</p>
+      </div>
+      <div class="icons">
+        <img src="../CSS MODULE Submited/image 2/image1.png" alt="">
+        <img src="../CSS MODULE Submited/image 2/image2.png" alt="">
+        <img src="../CSS MODULE Submited/image 2/image3.png" alt="">
+        <img src="../CSS MODULE Submited/image 2/image4.png" alt="">
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+                                                                                                                                                                 + bb                                   
+</html>
+
+
