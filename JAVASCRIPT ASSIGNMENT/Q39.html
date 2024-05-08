@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(num) {
+    const originalNum = num;
+    let reversedNum = 0;
+    
+    while (num > 0) {
+        const digit = num % 10;
+        reversedNum = reversedNum * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+    
+    return originalNum === reversedNum;
+}
+
+
+function getNumberFromUser(promptMessage) {
+    let input;
+    do {
+        input = parseInt(prompt(promptMessage));
+    } while (isNaN(input));
+    return input;
+}
+
+let num1 = getNumberFromUser("Enter the first number:");
+let num2 = getNumberFromUser("Enter the second number:");
+let num3 = getNumberFromUser("Enter the third number:");
+
+
+console.log(`${num1} is ${isPalindrome(num1) ? 'a palindrome' : 'not a palindrome'}.`);
+console.log(`${num2} is ${isPalindrome(num2) ? 'a palindrome' : 'not a palindrome'}.`);
+console.log(`${num3} is ${isPalindrome(num3) ? 'a palindrome' : 'not a palindrome'}.`);
+
+    </script>
+</body>
+</html>
