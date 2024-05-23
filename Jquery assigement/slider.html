@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-images img {
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-images">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+      </div>
+      
+    <script src="../jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+  var sliderImages = $('.slider-images');
+  var imageWidth = $('.slider-images img').width();
+  var imageCount = $('.slider-images img').length;
+  var currentIndex = 0;
+
+  function slide() {
+    if (currentIndex < imageCount - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    var offset = -1 * currentIndex * imageWidth;
+    sliderImages.css('transform', 'translateX(' + offset + 'px)');
+  }
+
+  setInterval(slide, 3000); // Change slide every 3 seconds
+});
+
+    </script>
+</body>
+</html>  
