@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert All Classes</title>
+</head>
+<body>
+    <h2>Class Alert Example</h2>
+
+    <div class="my-class">Item 1</div>
+    <div class="my-class">Item 2</div>
+    <div class="my-class">Item 3</div>
+    <div class="another-class">Item 4</div>
+
+    <button id="alertButton">Show All Classes</button>
+
+    <script>
+        document.getElementById('alertButton').addEventListener('click', function() {
+            const elements = document.querySelectorAll('.my-class');
+            let classNames = [];
+
+            elements.forEach(element => {
+                classNames.push(element.className);
+            });
+            alert('Classes: ' + classNames.join(', '));
+        });
+    </script>
+</body>
+</html>

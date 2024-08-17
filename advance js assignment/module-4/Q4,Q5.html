@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b3">API</button>
+    <div id="data"></div>
+    <script>
+            b3 = document.getElementById("b3");
+      b3.addEventListener("click", getAPI);
+      function getAPI() {
+        fetch("https://fakestoreapi.com/products")
+          .then((res) => {
+            return res.json();
+            console.log(res.json());
+          })
+          .then((data) => {
+            let html = "<table border='1'><tr><td>Name</td></tr>";
+
+            data.map((v) => {
+              html =
+                html +
+                `
+             <tr>
+             <td>${v.id}</td>
+             <td>${v.title}</td>
+             <td>${v.price}</td>
+             <td>${v.description}</td>
+             <td>${v.category}</td>
+             <td><img src= 
+                "${v.image}" 
+                alt="product image" width="100" 
+                height="100"> 
+            </td> 
+             
+             <td>${v.rating.rate}</td>
+             <td>${v.rating.count}</td>
+                </tr>`;
+            });
+
+            document.getElementById("data").innerHTML = html + "</table>";
+          });
+      }
+    </script>
+</body>
+</html>

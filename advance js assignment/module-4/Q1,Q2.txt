@@ -1,0 +1,7 @@
+Q1. What is JSON
+ans JSON stands for JavaScript Object Notation.It is a lightweight data interchange format that's 
+easy for humans to read and write, and easy for machines to parse and generate.
+JSON is favored because it is both simple and flexible, making it a go-to format for data serialization.
+
+Q2. what is promise 
+ans In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises are used to handle asynchronous tasks like fetching data from an API, reading a file, or performing any task that might take time to complete.Promises are a fundamental concept in modern JavaScript and are essential for handling tasks that take time to complete.

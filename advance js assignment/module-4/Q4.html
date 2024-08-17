@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+</head>
+<body>
+
+    <h1>Products List</h1>
+    <ul id="products-list"></ul>
+
+    <script>
+        // Fetch data from the API
+        fetch('https://fakestoreapi.com/products')
+            .then(response => {
+                // Check if the response is OK (status 200-299)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse the response as JSON
+            })
+            .then(data => {
+                console.log(data); // Log the data to the console
+
+                // Call a function to display the products in the HTML
+                displayProducts(data);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+
+        // Function to display products in the HTML
+        function displayProducts(products) {
+            const productsList = document.getElementById('products-list');
+            
+            // Iterate over the products array
+            products.forEach(product => {
+                // Create a list item element for each product
+                const li = document.createElement('li');
+                li.textContent = `${product.title} - $${product.price}`;
+                
+                // Append the list item to the products list
+                productsList.appendChild(li);
+            });
+        }
+    </script>
+
+</body>
+</html>
