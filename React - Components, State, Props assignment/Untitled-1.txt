@@ -1,0 +1,32 @@
+Q1. What is React Js?
+ans  React, is a free, open-source JavaScript library that helps developers build 
+interactive user interfaces (UIs) for web and mobile applications. React is component-based
+and declarative, which means it allows developers to create UIs by designing simple views
+for each state in their application. 
+
+Q2. What is NPM in React Js?
+ans The command npm is used to download JavaScript packages from Node Package Manager, 
+and npx is used to execute JavaScript packages downloaded this way.
+
+Q3. What is Role of Node Js in react Js?
+ans Using Node. js and React together empowers web applications to handle heavy server loads and
+requests. Therefore, it allows you to work easily throughout the development process.
+
+Q4. What is CLI command In React Js? 
+ans React has its own command-line interface (CLI) commands. However, these CLI commands 
+are currently only used to create a passable version of a react application using the 
+command line.
+
+Q5. What is Components in React Js? 
+ans React lets you create components, reusable UI elements for your app. In a React app, 
+every piece of UI is a component. React components are regular JavaScript functions 
+except: Their names always begin with a capital letter. They return JSX markup.
+
+Q6. What is Header and Content Components in React Js?
+ans  A header is a section at the top of a page that displays site name and navigation.
+React is the most popular frontend library for developing component-driven user interfaces.
+It's used for developing single page, mobile, and server-rendered applications.
+
+Q7 How to install React Js on Windows, linux Operating System?
+ans we can install react js in window from oficiall website https://react.dev/.
+
